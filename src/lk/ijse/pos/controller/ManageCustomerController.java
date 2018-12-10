@@ -96,6 +96,7 @@ public class ManageCustomerController implements Initializable {
                 a.setHeaderText(null);
                 a.showAndWait();
                 loadCustomers();
+                clearFields();
             }
         }
     }
@@ -175,6 +176,7 @@ public class ManageCustomerController implements Initializable {
         if (isDeleted) {
             AlertBox.setAlert(Alert.AlertType.INFORMATION, "Customer Deleted");
             loadCustomers();
+            clearFields();
             addButton.setDisable(false);
             updateButton.setDisable(true);
             deleteButton.setDisable(true);
@@ -194,6 +196,7 @@ public class ManageCustomerController implements Initializable {
             if (isUpdated) {
                 AlertBox.setAlert(Alert.AlertType.INFORMATION, "Customer Updated");
                 loadCustomers();
+                clearFields();
                 addButton.setDisable(false);
                 updateButton.setDisable(true);
                 deleteButton.setDisable(true);
@@ -213,5 +216,12 @@ public class ManageCustomerController implements Initializable {
             updateButton.setDisable(false);
             deleteButton.setDisable(false);
         }
+    }
+
+    private void clearFields() {
+        customerNicText.setText("");
+        customerIdText.setText("");
+        customerContactText.setText("");
+        customerNameText.setText("");
     }
 }

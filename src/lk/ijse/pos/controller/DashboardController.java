@@ -41,4 +41,9 @@ public class DashboardController implements Initializable {
     }
 
 
+    @FXML
+    void reportButtonAction(ActionEvent event) {
+        LoadPane.loadPanel("/lk/ijse/pos/view/reports.fxml", event, this.getClass());
+    }
+
 }

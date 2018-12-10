@@ -51,6 +51,7 @@ public class OrdersBOImpl implements OrdersBO {
             orders.setCustomer(customer);
             orders.setOrderDate(ordersDTO.getOrderDate());
             orders.setPayment(payment);
+            orders.setOrderPrice(ordersDTO.getOrderPrice());
             boolean isAddedOrder = (session.save(orders) != null);
             boolean isAdded = false;
             if (isAddedOrder) {

@@ -43,5 +43,25 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/com.lowagie.text-2.1.7.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/commons-beanutils-1.8.3.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/commons-digester-2.1.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/itextpdf-5.3.4.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/jasperreports-6.4.3.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/jasperreports-javaflow-6.4.3.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/jcommon-1.0.8.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/jfreechart-1.0.13.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/org-apache-commons-logging.jar!/" />
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/org.apache.commons.collections.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://E:/Java Play Ground/Important Lib/Jasper Report/itext-2.1.7-src.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

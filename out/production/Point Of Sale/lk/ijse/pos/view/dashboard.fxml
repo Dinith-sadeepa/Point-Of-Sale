@@ -66,12 +66,12 @@
                   <Image url="@../assets/icons8-o-96.png" />
                </image>
             </ImageView>
-            <Label layoutX="54.0" layoutY="106.0" prefHeight="41.0" prefWidth="108.0" text="View Orders">
+            <Label layoutX="69.0" layoutY="106.0" prefHeight="41.0" prefWidth="81.0" text="Reports">
                <font>
                   <Font name="PT Sans Narrow" size="24.0" />
                </font>
             </Label>
-            <JFXButton layoutY="-3.0" prefHeight="160.0" prefWidth="200.0" text=" " />
+            <JFXButton layoutY="-3.0" onAction="#reportButtonAction" prefHeight="160.0" prefWidth="200.0" text=" " />
          </children>
       </AnchorPane>
    </children>

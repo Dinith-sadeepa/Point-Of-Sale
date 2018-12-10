@@ -17,6 +17,7 @@ import lk.ijse.pos.business.custom.ItemBO;
 import lk.ijse.pos.business.custom.OrdersBO;
 import lk.ijse.pos.common.AlertBox;
 import lk.ijse.pos.common.LoadPane;
+import lk.ijse.pos.common.Validation;
 import lk.ijse.pos.model.*;
 import org.controlsfx.control.textfield.TextFields;
 
@@ -119,39 +120,47 @@ public class PlaceOrderController implements Initializable {
 
     @FXML
     void cancelButtonAction(ActionEvent event) {
-
+        clearFields();
     }
 
     @FXML
     void customerContactTextAction(ActionEvent event) {
-
+        if (Validation.integerValueValidate(customerContactText.getText())) {
+            payText.requestFocus();
+        }
     }
 
     @FXML
     void customerNameTextAction(ActionEvent event) {
-
+        customerContactText.requestFocus();
     }
 
     @FXML
     void customerNicTextAction(ActionEvent event) {
-        ArrayList<CustomerDTO> customerDTOS = null;
-        try {
-            customerDTOS = (ArrayList<CustomerDTO>) customerBO.getAllCustomers();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if (customerDTOS != null) {
-            for (CustomerDTO customerDTO : customerDTOS) {
-                if (customerDTO.getCustomerNic().equals(customerNicText.getText())) {
-                    customerNameText.setText(customerDTO.getCustomerName());
-                    customerContactText.setText(customerDTO.getCustomerContact() + "");
-                } else {
-                    customerNameText.setDisable(false);
-                    customerContactText.setDisable(false);
-                    customerNameText.requestFocus();
-                }
+        if (Validation.nicValidate(customerNicText.getText())) {
+            ArrayList<CustomerDTO> customerDTOS = null;
+            try {
+                customerDTOS = (ArrayList<CustomerDTO>) customerBO.getAllCustomers();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            payText.requestFocus();
+            if (customerDTOS != null) {
+                for (CustomerDTO customerDTO : customerDTOS) {
+                    if (customerDTO.getCustomerNic().equals(customerNicText.getText())) {
+                        customerNameText.setText(customerDTO.getCustomerName());
+                        customerContactText.setText(customerDTO.getCustomerContact() + "");
+                    } else {
+                        customerNameText.setDisable(false);
+                        customerContactText.setDisable(false);
+
+                    }
+                }
+                payText.requestFocus();
+            } else {
+                customerNameText.requestFocus();
+            }
+        } else {
+            AlertBox.setAlert(Alert.AlertType.WARNING, "NIC invalid!");
         }
     }
 
@@ -217,8 +226,12 @@ public class PlaceOrderController implements Initializable {
     void payTextAction(ActionEvent event) {
         double pay = Double.parseDouble(payText.getText());
         double total = Double.parseDouble(totalPaymentText.getText());
-
-        balanceText.setText((total - pay) + "");
+        if (pay < total) {
+            AlertBox.setAlert(Alert.AlertType.WARNING, "Please Pay Total Amount");
+        } else {
+            double balance = (total - pay);
+            balanceText.setText(balance + "");
+        }
     }
 
     @FXML
@@ -287,10 +300,11 @@ public class PlaceOrderController implements Initializable {
             paymentDTO.setPaymentDate(new Date());
 
             ordersDTO.setPaymentDTO(paymentDTO);
-
+            ordersDTO.setOrderPrice(Double.parseDouble(totalPaymentText.getText()));
             boolean isAdded = ordersBO.addOrders(ordersDTO);
             if (isAdded) {
                 AlertBox.setAlert(Alert.AlertType.INFORMATION, "Order Placed");
+                clearFields();
             }
 
         } catch (
@@ -308,5 +322,19 @@ public class PlaceOrderController implements Initializable {
     @FXML
     void dashboardLabelClicked(MouseEvent event) {
         LoadPane.loadPanel("/lk/ijse/pos/view/dashboard.fxml", event, this.getClass());
+    }
+
+    private void clearFields() {
+        itemDescriptionText.setText("");
+        qtyOnHandText.setText("");
+        itemQtyText.setText("");
+        itemUnitPriceText.setText("");
+        itemOrderTable.setItems(null);
+        customerNameText.setText(null);
+        customerContactText.setText(null);
+        customerNicText.setText(null);
+        totalPaymentText.setText(null);
+        payText.setText(null);
+        balanceText.setText(null);
     }
 }

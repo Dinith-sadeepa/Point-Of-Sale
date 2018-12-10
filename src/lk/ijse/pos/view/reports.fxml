@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="1199.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.ReportController">
+   <children>
+      <Label layoutX="14.0" layoutY="-40.0" prefHeight="108.0" prefWidth="57.0" text="&gt;">
+         <font>
+            <Font name="Motion Picture Personal Use " size="96.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="14.0" onMouseClicked="#dashboardLabalClicked" prefHeight="61.0" prefWidth="125.0" text="Dashboard" textFill="#a84343" underline="true">
+         <font>
+            <Font name="PT Sans Caption Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="9.0" prefHeight="66.0" prefWidth="28.0" text="/">
+         <font>
+            <Font name="Motion Picture Personal Use " size="49.0" />
+         </font>
+      </Label>
+      <Label layoutX="208.0" layoutY="16.0" prefHeight="61.0" prefWidth="192.0" text="Reports">
+         <font>
+            <Font name="PT Sans Caption" size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="347.0" layoutY="181.0" prefHeight="383.0" prefWidth="506.0" style="-fx-border-color: black;">
+         <children>
+            <JFXButton layoutX="120.0" layoutY="43.0" onAction="#customerFullReportButton" prefHeight="54.0" prefWidth="266.0" style="-fx-background-color: green;" text="Customer Full Report" textFill="WHITE">
+               <font>
+                  <Font name="PT Sans Caption" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="120.0" layoutY="124.0" onAction="#itemFullReportButton" prefHeight="54.0" prefWidth="266.0" style="-fx-background-color: green;" text="Item Full Report" textFill="WHITE">
+               <font>
+                  <Font name="PT Sans Caption" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="121.0" layoutY="211.0" onAction="#ordersFullReportButton" prefHeight="54.0" prefWidth="266.0" style="-fx-background-color: green;" text="Orders Full Report" textFill="WHITE">
+               <font>
+                  <Font name="PT Sans Caption" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="120.0" layoutY="290.0" onAction="#orderDetailFullReportButton" prefHeight="54.0" prefWidth="266.0" style="-fx-background-color: green;" text="Order Detail Full report" textFill="WHITE">
+               <font>
+                  <Font name="PT Sans Caption" size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -14,6 +14,7 @@ public class Orders {
     private int orderId;
     @Temporal(TemporalType.DATE)
     private Date orderDate;
+    private double orderPrice;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "customerId", referencedColumnName = "customerId")
@@ -28,13 +29,10 @@ public class Orders {
     public Orders() {
     }
 
-    public Orders(Date orderDate, Customer customer) {
-        this.orderDate = orderDate;
-        this.customer = customer;
-    }
 
-    public Orders(Date orderDate, Customer customer, List<OrderDetail> orderDetails, Payment payment) {
+    public Orders(Date orderDate, double orderPrice, Customer customer, List<OrderDetail> orderDetails, Payment payment) {
         this.orderDate = orderDate;
+        this.orderPrice = orderPrice;
         this.customer = customer;
         this.orderDetails = orderDetails;
         this.payment = payment;
@@ -42,6 +40,14 @@ public class Orders {
 
     public Payment getPayment() {
         return payment;
+    }
+
+    public double getOrderPrice() {
+        return orderPrice;
+    }
+
+    public void setOrderPrice(double orderPrice) {
+        this.orderPrice = orderPrice;
     }
 
     public void setPayment(Payment payment) {

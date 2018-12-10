@@ -7,6 +7,7 @@ import java.util.List;
 public class OrdersDTO {
     private int orderId;
     private Date orderDate;
+    private double orderPrice;
 
     private CustomerDTO customer;
     private List<OrderDetailDTO> orderDetails = new ArrayList<>();
@@ -15,17 +16,27 @@ public class OrdersDTO {
     public OrdersDTO() {
     }
 
-    public OrdersDTO(int orderId, Date orderDate) {
+    public OrdersDTO(int orderId, Date orderDate, double orderPrice) {
         this.orderId = orderId;
         this.orderDate = orderDate;
+        this.orderPrice = orderPrice;
     }
 
-    public OrdersDTO(int orderId, Date orderDate, CustomerDTO customer, List<OrderDetailDTO> orderDetails, PaymentDTO paymentDTO) {
+    public OrdersDTO(int orderId, Date orderDate, double orderPrice, CustomerDTO customer, List<OrderDetailDTO> orderDetails, PaymentDTO paymentDTO) {
         this.orderId = orderId;
         this.orderDate = orderDate;
+        this.orderPrice = orderPrice;
         this.customer = customer;
         this.orderDetails = orderDetails;
         this.paymentDTO = paymentDTO;
+    }
+
+    public double getOrderPrice() {
+        return orderPrice;
+    }
+
+    public void setOrderPrice(double orderPrice) {
+        this.orderPrice = orderPrice;
     }
 
     public int getOrderId() {

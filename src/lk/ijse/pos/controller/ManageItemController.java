@@ -90,6 +90,7 @@ public class ManageItemController implements Initializable {
             if (isAdded) {
                 AlertBox.setAlert(Alert.AlertType.INFORMATION, "Item Added");
                 loadItems();
+                clearFields();
             }
         }
     }
@@ -136,6 +137,7 @@ public class ManageItemController implements Initializable {
         if (isDeleted) {
             AlertBox.setAlert(Alert.AlertType.INFORMATION, "Item Deleted");
             loadItems();
+            clearFields();
             addButton.setDisable(false);
             updateButton.setDisable(true);
             deleteButton.setDisable(true);
@@ -183,10 +185,18 @@ public class ManageItemController implements Initializable {
             if (isUpdated) {
                 AlertBox.setAlert(Alert.AlertType.INFORMATION, "Item Updated");
                 loadItems();
+                clearFields();
                 addButton.setDisable(false);
                 updateButton.setDisable(true);
                 deleteButton.setDisable(true);
             }
         }
+    }
+
+    private void clearFields() {
+        itemCodeText.setText("");
+        itemUnitPriceText.setText("");
+        itemQtyText.setText("");
+        itemDescriptionText.setText("");
     }
 }
