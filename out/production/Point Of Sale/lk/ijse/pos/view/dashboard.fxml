@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="1199.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.DashboardController">
+   <children>
+      <ImageView fx:id="cover" fitHeight="320.0" fitWidth="1120.0" layoutX="57.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/pos%20cover.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="57.0" layoutY="446.0" prefHeight="158.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="60.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-trust-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="16.0" layoutY="106.0" prefHeight="41.0" prefWidth="160.0" text="Manage Customers">
+               <font>
+                  <Font name="PT Sans Narrow" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="manageCustomerButton" layoutY="-3.0" onAction="#manageCustomerButtonAction" prefHeight="160.0" prefWidth="200.0" text=" " />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="357.0" layoutY="446.0" prefHeight="158.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="60.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-handle-with-care-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="106.0" prefHeight="41.0" prefWidth="124.0" text="Manage Items">
+               <font>
+                  <Font name="PT Sans Narrow" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="manageItemButton" layoutY="-3.0" onAction="#manageItemButtonAction" prefHeight="160.0" prefWidth="200.0" text=" " />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="660.0" layoutY="446.0" prefHeight="158.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="60.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-buy-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="106.0" prefHeight="41.0" prefWidth="108.0" text="Place Order">
+               <font>
+                  <Font name="PT Sans Narrow" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="placeOrderButton" layoutY="-3.0" onAction="#placeOrderButtonAction" prefHeight="160.0" prefWidth="200.0" text=" " />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="947.0" layoutY="446.0" prefHeight="158.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="60.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-o-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="106.0" prefHeight="41.0" prefWidth="108.0" text="View Orders">
+               <font>
+                  <Font name="PT Sans Narrow" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton layoutY="-3.0" prefHeight="160.0" prefWidth="200.0" text=" " />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
