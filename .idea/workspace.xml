@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3dd8d641-7d6d-4be8-af34-0dc999a44fa1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/entity/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/model/PaymentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/business/custom/impl/OrdersBOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/business/custom/impl/OrdersBOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/controller/PlaceOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/controller/PlaceOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/entity/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/entity/Orders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/model/OrdersDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/model/OrdersDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrdersBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrdersBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/controller/PlaceOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/entity/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/model/OrdersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/model/OrdersDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/util/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/util/HibernateUtil.java" afterDir="false" />
+    <list default="true" id="3dd8d641-7d6d-4be8-af34-0dc999a44fa1" name="Default Changelist" comment="payment done">
+      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/CustomerBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/CustomerBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/ItemBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/ItemBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/view/customer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/view/customer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/view/item.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/view/item.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,13 +27,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="3" />
-          <entry key="java" value="76" />
+          <entry key="java" value="83" />
           <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="76" />
+          <entry key="JAVA" value="83" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="3" />
         </counts>
@@ -47,12 +41,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="2" />
-          <entry key="java" value="6056" />
+          <entry key="java" value="6966" />
+          <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6056" />
+          <entry key="JAVA" value="6966" />
+          <entry key="PLAIN_TEXT" value="17" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -60,49 +56,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/model/PaymentDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-              <folding>
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#979#980#0" expanded="true" />
-                <element signature="e#1025#1026#0" expanded="true" />
-                <element signature="e#1065#1066#0" expanded="true" />
-                <element signature="e#1101#1102#0" expanded="true" />
-                <element signature="e#1159#1160#0" expanded="true" />
-                <element signature="e#1209#1210#0" expanded="true" />
-                <element signature="e#1248#1249#0" expanded="true" />
-                <element signature="e#1280#1281#0" expanded="true" />
-                <element signature="e#1333#1334#0" expanded="true" />
-                <element signature="e#1375#1376#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/PlaceOrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="237" column="47" lean-forward="true" selection-start-line="237" selection-start-column="47" selection-end-line="237" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrdersBOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="38" column="90" lean-forward="true" selection-start-line="38" selection-start-column="90" selection-end-line="38" selection-end-column="90" />
+            <state relative-caret-position="1567">
+              <caret line="176" column="12" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1979#1980#0" expanded="true" />
+                <element signature="e#2026#2027#0" expanded="true" />
+                <element signature="e#2090#2091#0" expanded="true" />
+                <element signature="e#2136#2137#0" expanded="true" />
+                <element signature="e#2199#2200#0" expanded="true" />
+                <element signature="e#2249#2250#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3847#3848#0" expanded="true" />
+                <element signature="e#3889#3890#0" expanded="true" />
+                <element signature="e#3948#3949#0" expanded="true" />
+                <element signature="e#3996#3997#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/model/ItemDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1447#1448#0" expanded="true" />
+                <element signature="e#1478#1479#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/CustomerBOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,10 +117,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/util/HibernateUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/ItemBOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="246">
+              <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,47 +129,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/model/OrdersDTO.java">
+        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/model/CustomerDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+            <state relative-caret-position="153">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1068#1069#0" expanded="true" />
-                <element signature="e#1112#1113#0" expanded="true" />
-                <element signature="e#876#877#0" expanded="true" />
-                <element signature="e#908#909#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
-                <element signature="e#1038#1039#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1122#1123#0" expanded="true" />
-                <element signature="e#1162#1163#0" expanded="true" />
-                <element signature="e#1215#1216#0" expanded="true" />
-                <element signature="e#1250#1251#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
-                <element signature="e#1368#1369#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/entity/Orders.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1154#1155#0" expanded="true" />
-                <element signature="e#1184#1185#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1269#1270#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -204,11 +175,7 @@
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom/ItemBO.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom/OrderDetailBO.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom/OrdersBO.java" />
-        <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/CustomerBOImpl.java" />
-        <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/ItemBOImpl.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrderDetailBOImpl.java" />
-        <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java" />
-        <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/entity/Payment.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/model/PaymentDTO.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/model/OrdersDTO.java" />
@@ -216,6 +183,11 @@
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/PlaceOrderController.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/util/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrdersBOImpl.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/common/Validation.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/CustomerBOImpl.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/ItemBOImpl.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java" />
       </list>
     </option>
   </component>
@@ -271,27 +243,6 @@
               <item name="pos" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Point Of Sale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Point Of Sale" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pos" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Point Of Sale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Point Of Sale" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pos" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Point Of Sale" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Point Of Sale" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pos" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -301,7 +252,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544471234767" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544473735562" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Important java lessaon/Project/2nd Semester/rmi/RMI project-1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -310,6 +261,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lk.ijse.pos.common" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Java class\2nd Semester\pos\Point Of Sale\src" />
       <recent name="E:\Java class\2nd Semester\pos\Point Of Sale\src\lk\ijse\pos\view" />
@@ -358,12 +312,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544440425842</updated>
-      <workItem from="1544440427955" duration="22234000" />
+      <workItem from="1544440427955" duration="24721000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22234000" />
+    <option name="totallyTimeSpent" value="24721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -385,7 +339,7 @@
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" x="23" y="367" width="1490" height="99" id="Run" order="2" visible="true" weight="0.12027972" />
+      <window_info active="true" anchor="bottom" x="23" y="367" width="1490" height="99" id="Run" order="2" visible="true" weight="0.22377622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -407,6 +361,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="payment done" />
+    <option name="LAST_COMMIT_MESSAGE" value="payment done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/view/placeorder.fxml">
@@ -525,46 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/model/CustomerDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="86" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/model/ItemDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1144#1145#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1364#1365#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1442#1443#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
-            <element signature="e#1536#1537#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-            <element signature="e#1674#1675#0" expanded="true" />
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#1792#1793#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/entity/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -675,58 +593,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/CustomerBOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/ItemBOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrderDetailBOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1933#1934#0" expanded="true" />
-            <element signature="e#1975#1976#0" expanded="true" />
-            <element signature="e#2034#2035#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,7 +708,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/util/HibernateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="340">
           <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -856,10 +728,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrdersBOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="38" column="90" lean-forward="true" selection-start-line="38" selection-start-column="90" selection-end-line="38" selection-end-column="90" />
+        <state relative-caret-position="429">
+          <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/common/Validation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/model/CustomerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/model/ItemDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1447#1448#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/CustomerBOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/ItemBOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+            <element signature="e#3889#3890#0" expanded="true" />
+            <element signature="e#3948#3949#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1567">
+          <caret line="176" column="12" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="e#2026#2027#0" expanded="true" />
+            <element signature="e#2090#2091#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2249#2250#0" expanded="true" />
           </folding>
         </state>
       </provider>

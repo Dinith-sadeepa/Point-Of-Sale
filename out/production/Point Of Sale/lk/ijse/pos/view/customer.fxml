@@ -58,24 +58,24 @@
             <TextField fx:id="customerIdText" disable="true" layoutX="19.0" layoutY="80.0" onAction="#customerIdTextAction" prefHeight="41.0" prefWidth="111.0" style="-fx-border-color: black;" />
          </children>
       </AnchorPane>
-      <JFXButton layoutX="49.0" layoutY="585.0" onAction="#addButtonAction" prefHeight="41.0" prefWidth="95.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
+      <JFXButton fx:id="addButton" layoutX="49.0" layoutY="585.0" onAction="#addButtonAction" prefHeight="41.0" prefWidth="95.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton disable="true" layoutX="161.0" layoutY="585.0" onAction="#updateButtonAction" prefHeight="41.0" prefWidth="95.0" style="-fx-background-color: #2A5699;" text="Update" textFill="WHITE">
+      <JFXButton fx:id="updateButton" disable="true" layoutX="161.0" layoutY="585.0" onAction="#updateButtonAction" prefHeight="41.0" prefWidth="95.0" style="-fx-background-color: #2A5699;" text="Update" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton disable="true" layoutX="273.0" layoutY="585.0" onAction="#deleteButtonAction" prefHeight="41.0" prefWidth="95.0" style="-fx-background-color: #DB0100;" text="Delete" textFill="WHITE">
+      <JFXButton fx:id="deleteButton" disable="true" layoutX="273.0" layoutY="585.0" onAction="#deleteButtonAction" prefHeight="41.0" prefWidth="95.0" style="-fx-background-color: #DB0100;" text="Delete" textFill="WHITE">
          <font>
             <Font name="Times New Roman Bold" size="16.0" />
          </font>
       </JFXButton>
       <AnchorPane layoutX="400.0" layoutY="86.0" prefHeight="539.0" prefWidth="768.0" style="-fx-border-color: black;">
          <children>
-            <TableView fx:id="customerTable" layoutX="26.0" layoutY="24.0" prefHeight="493.0" prefWidth="717.0">
+            <TableView fx:id="customerTable" layoutX="26.0" layoutY="24.0" onMouseClicked="#customerTableClicked" prefHeight="493.0" prefWidth="717.0">
               <columns>
                 <TableColumn prefWidth="120.0" text="Customer Id" />
                 <TableColumn prefWidth="222.0" text="Customer Name" />

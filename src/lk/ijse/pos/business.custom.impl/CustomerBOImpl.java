@@ -29,12 +29,26 @@ public class CustomerBOImpl implements CustomerBO {
 
     @Override
     public boolean updateCustomer(CustomerDTO customerDTO) throws Exception {
-        return false;
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            Customer customer = session.get(Customer.class, customerDTO.getCustomerId());
+            customer.setCustomerContact(customerDTO.getCustomerContact());
+            customer.setCustomerNic(customerDTO.getCustomerNic());
+            customer.setCustomerName(customerDTO.getCustomerName());
+            session.getTransaction().commit();
+            return true;
+        }
     }
 
     @Override
     public boolean deleteCustomer(int id) throws Exception {
-        return false;
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            Customer customer = session.get(Customer.class, id);
+            session.remove(customer);
+            session.getTransaction().commit();
+            return true;
+        }
     }
 
     @Override

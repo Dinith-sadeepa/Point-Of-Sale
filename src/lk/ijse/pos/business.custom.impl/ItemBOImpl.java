@@ -29,12 +29,26 @@ public class ItemBOImpl implements ItemBO {
 
     @Override
     public boolean updateItem(ItemDTO itemDTO) throws Exception {
-        return false;
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            Item item = session.get(Item.class, itemDTO.getItemCode());
+            item.setItemUnitPrice(itemDTO.getItemUnitPrice());
+            item.setItemQty(itemDTO.getItemQty());
+            item.setItemDescription(itemDTO.getItemDescription());
+            session.getTransaction().commit();
+            return true;
+        }
     }
 
     @Override
     public boolean deleteItem(int id) throws Exception {
-        return false;
+        try (Session session = sessionFactory.openSession()) {
+            session.getTransaction().begin();
+            Item item = session.get(Item.class, id);
+            session.remove(item);
+            session.getTransaction().commit();
+            return true;
+        }
     }
 
     @Override
