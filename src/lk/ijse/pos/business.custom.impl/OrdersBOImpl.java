@@ -4,10 +4,7 @@ import lk.ijse.pos.business.BOFactory;
 import lk.ijse.pos.business.custom.CustomerBO;
 import lk.ijse.pos.business.custom.OrderDetailBO;
 import lk.ijse.pos.business.custom.OrdersBO;
-import lk.ijse.pos.entity.Customer;
-import lk.ijse.pos.entity.Item;
-import lk.ijse.pos.entity.OrderDetail;
-import lk.ijse.pos.entity.Orders;
+import lk.ijse.pos.entity.*;
 import lk.ijse.pos.model.ItemDTO;
 import lk.ijse.pos.model.OrderDetailDTO;
 import lk.ijse.pos.model.OrdersDTO;
@@ -44,9 +41,16 @@ public class OrdersBOImpl implements OrdersBO {
                 customer = session.get(Customer.class, ordersDTO.getCustomer().getCustomerId());
             }
 
+            Payment payment = new Payment();
+            payment.setPaymentAmount(ordersDTO.getPaymentDTO().getPaymentAmount());
+            payment.setPaymentDate(ordersDTO.getPaymentDTO().getPaymentDate());
+
+
             Orders orders = new Orders();
+            payment.setOrders(orders);
             orders.setCustomer(customer);
             orders.setOrderDate(ordersDTO.getOrderDate());
+            orders.setPayment(payment);
             boolean isAddedOrder = (session.save(orders) != null);
             boolean isAdded = false;
             if (isAddedOrder) {

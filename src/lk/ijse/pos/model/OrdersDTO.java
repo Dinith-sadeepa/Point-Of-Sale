@@ -10,6 +10,7 @@ public class OrdersDTO {
 
     private CustomerDTO customer;
     private List<OrderDetailDTO> orderDetails = new ArrayList<>();
+    private PaymentDTO paymentDTO;
 
     public OrdersDTO() {
     }
@@ -19,11 +20,12 @@ public class OrdersDTO {
         this.orderDate = orderDate;
     }
 
-    public OrdersDTO(int orderId, Date orderDate, CustomerDTO customer, List<OrderDetailDTO> orderDetails) {
+    public OrdersDTO(int orderId, Date orderDate, CustomerDTO customer, List<OrderDetailDTO> orderDetails, PaymentDTO paymentDTO) {
         this.orderId = orderId;
         this.orderDate = orderDate;
         this.customer = customer;
         this.orderDetails = orderDetails;
+        this.paymentDTO = paymentDTO;
     }
 
     public int getOrderId() {
@@ -32,6 +34,14 @@ public class OrdersDTO {
 
     public void setOrderId(int orderId) {
         this.orderId = orderId;
+    }
+
+    public PaymentDTO getPaymentDTO() {
+        return paymentDTO;
+    }
+
+    public void setPaymentDTO(PaymentDTO paymentDTO) {
+        this.paymentDTO = paymentDTO;
     }
 
     public Date getOrderDate() {

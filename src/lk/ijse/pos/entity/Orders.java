@@ -16,11 +16,14 @@ public class Orders {
     private Date orderDate;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "customerId",referencedColumnName = "customerId")
+    @JoinColumn(name = "customerId", referencedColumnName = "customerId")
     private Customer customer;
 
-    @OneToMany(mappedBy = "orders",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
     private List<OrderDetail> orderDetails = new ArrayList<>();
+
+    @OneToOne(mappedBy = "orders", cascade = CascadeType.ALL)
+    private Payment payment;
 
     public Orders() {
     }
@@ -30,10 +33,19 @@ public class Orders {
         this.customer = customer;
     }
 
-    public Orders(Date orderDate, Customer customer, List<OrderDetail> orderDetails) {
+    public Orders(Date orderDate, Customer customer, List<OrderDetail> orderDetails, Payment payment) {
         this.orderDate = orderDate;
         this.customer = customer;
         this.orderDetails = orderDetails;
+        this.payment = payment;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
     }
 
     public int getOrderId() {

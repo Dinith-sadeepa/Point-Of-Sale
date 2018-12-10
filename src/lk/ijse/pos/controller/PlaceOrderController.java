@@ -17,7 +17,6 @@ import lk.ijse.pos.business.custom.ItemBO;
 import lk.ijse.pos.business.custom.OrdersBO;
 import lk.ijse.pos.common.AlertBox;
 import lk.ijse.pos.common.LoadPane;
-import lk.ijse.pos.entity.OrderDetail;
 import lk.ijse.pos.model.*;
 import org.controlsfx.control.textfield.TextFields;
 
@@ -281,6 +280,14 @@ public class PlaceOrderController implements Initializable {
             }
 
             ordersDTO.setOrderDetails(orderDetailDTOS);
+
+            PaymentDTO paymentDTO = new PaymentDTO();
+            paymentDTO.setOrdersDTO(ordersDTO);
+            paymentDTO.setPaymentAmount(Double.parseDouble(payText.getText()));
+            paymentDTO.setPaymentDate(new Date());
+
+            ordersDTO.setPaymentDTO(paymentDTO);
+
             boolean isAdded = ordersBO.addOrders(ordersDTO);
             if (isAdded) {
                 AlertBox.setAlert(Alert.AlertType.INFORMATION, "Order Placed");
