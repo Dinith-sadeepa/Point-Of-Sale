@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3dd8d641-7d6d-4be8-af34-0dc999a44fa1" name="Default Changelist" comment="payment done">
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/common/reports/Customer.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/common/reports/Customer.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/common/reports/Item.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/common/reports/Item.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/common/reports/Order.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/common/reports/Order.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/common/reports/Order_Detail.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lk/ijse/pos/common/reports/Order_Detail.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Point Of Sale.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Point Of Sale.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/business/custom/impl/OrdersBOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/business/custom/impl/OrdersBOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/controller/ManageCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/controller/ManageCustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/controller/ManageItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/controller/ManageItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/controller/PlaceOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/controller/PlaceOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/entity/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/entity/Orders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/model/OrdersDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/model/OrdersDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Point Of Sale/lk/ijse/pos/view/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrdersBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrdersBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/controller/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/controller/ManageItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/controller/PlaceOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/entity/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/entity/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/model/OrdersDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/model/OrdersDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lk/ijse/pos/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lk/ijse/pos/view/dashboard.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="3dd8d641-7d6d-4be8-af34-0dc999a44fa1" name="Default Changelist" comment="payment done" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +13,7 @@
     <session id="964241453">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -61,13 +36,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="2" />
-          <entry key="java" value="7435" />
+          <entry key="java" value="7482" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7435" />
+          <entry key="JAVA" value="7482" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="XML" value="2" />
         </counts>
@@ -88,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ReportController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="480">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,10 +77,17 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/common/JasperReportGenerator.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/common/db/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -174,9 +156,9 @@
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/PlaceOrderController.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/business.custom.impl/OrdersBOImpl.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/DashboardController.java" />
-        <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/ReportController.java" />
-        <option value="$PROJECT_DIR$/src/lk/ijse/pos/common/JasperReportGenerator.java" />
         <option value="$PROJECT_DIR$/src/lk/ijse/pos/common/db/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/common/JasperReportGenerator.java" />
+        <option value="$PROJECT_DIR$/src/lk/ijse/pos/controller/ReportController.java" />
       </list>
     </option>
   </component>
@@ -270,7 +252,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544476652023" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544476800279" />
     <property name="last_opened_file_path" value="E:/Java Play Ground/Important Lib/Jasper Report/org.apache.commons.collections.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -332,12 +314,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544440425842</updated>
-      <workItem from="1544440427955" duration="27259000" />
+      <workItem from="1544440427955" duration="27567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27259000" />
+    <option name="totallyTimeSpent" value="27567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -349,7 +331,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -359,7 +341,7 @@
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" x="23" y="367" width="1490" height="99" id="Run" order="2" visible="true" weight="0.22377622" />
+      <window_info anchor="bottom" x="23" y="367" width="1490" height="99" id="Run" order="2" weight="0.22377622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -825,23 +807,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ReportController.java">
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/common/JasperReportGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/common/JasperReportGenerator.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/common/db/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="87" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lk/ijse/pos/controller/ReportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
