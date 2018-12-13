@@ -57,6 +57,7 @@ public class OrdersBOImpl implements OrdersBO {
             if (isAddedOrder) {
                 List<OrderDetail> orderDetails = new ArrayList<>();
                 for (OrderDetailDTO orderDetailDTO : ordersDTO.getOrderDetails()) {
+
                     ItemDTO itemDTO = orderDetailDTO.getItem();
                     Item item = new Item();
                     item.setItemCode(itemDTO.getItemCode());
@@ -71,6 +72,9 @@ public class OrdersBOImpl implements OrdersBO {
                     orderDetail.setPrice(orderDetailDTO.getPrice());
 
                     isAdded = (session.save(orderDetail) != null);
+
+//                    item1.setItemQty((item1.getItemQty()) - (itemDTO.getItemQty()));
+
                 }
             }
 

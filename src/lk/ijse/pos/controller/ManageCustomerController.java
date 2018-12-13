@@ -83,7 +83,7 @@ public class ManageCustomerController implements Initializable {
 
     @FXML
     void addButtonAction(ActionEvent event) {
-        if (checkName() || checkNIC() || checkContact()) {
+        if (checkName() && checkNIC() && checkContact()) {
             CustomerDTO customerDTO = new CustomerDTO(customerNameText.getText(), customerNicText.getText(), Integer.parseInt(customerContactText.getText()));
             boolean isAdded = false;
             try {
@@ -117,10 +117,12 @@ public class ManageCustomerController implements Initializable {
     private boolean checkNIC() {
         if (customerNicText.getText().trim().isEmpty()) {
             AlertBox.setAlert(Alert.AlertType.WARNING, "Customer NIC is Empty");
+            System.out.println("n");
             return false;
         } else {
             if (!Validation.nicValidate(customerNicText.getText())) {
                 AlertBox.setAlert(Alert.AlertType.WARNING, "Customer nic is invalid");
+                System.out.println("2");
                 return false;
             }
         }
@@ -157,7 +159,12 @@ public class ManageCustomerController implements Initializable {
 
     @FXML
     void customerNicTextAction(ActionEvent event) {
-        customerContactText.requestFocus();
+        if (checkNIC()) {
+            customerContactText.requestFocus();
+        } else {
+            customerNicText.requestFocus();
+            customerNicText.selectAll();
+        }
     }
 
     @FXML
@@ -185,7 +192,7 @@ public class ManageCustomerController implements Initializable {
 
     @FXML
     void updateButtonAction(ActionEvent event) {
-        if (checkName() || checkNIC() || checkContact()) {
+        if (checkName() && checkNIC() && checkContact()) {
             CustomerDTO customerDTO = new CustomerDTO(Integer.parseInt(customerIdText.getText()), customerNameText.getText(), customerNicText.getText(), Integer.parseInt(customerContactText.getText()));
             boolean isUpdated = false;
             try {

@@ -11,7 +11,7 @@ public class Validation {
     }
 
     public static boolean nicValidate(String nic) {
-        if ((nic.matches("[0-9]{9}[vV]")) || (nic.matches("[0-9]{12}"))) {
+        if ((nic.matches("[0-9]{9}[vV]"))) {
             return true;
         } else {
             return false;

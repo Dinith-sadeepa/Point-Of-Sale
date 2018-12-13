@@ -79,7 +79,7 @@ public class ManageItemController implements Initializable {
 
     @FXML
     void addButtonAction(ActionEvent event) {
-        if (checkQty() || checkPrice()) {
+        if (checkQty() && checkPrice()) {
             ItemDTO itemDTO = new ItemDTO(itemDescriptionText.getText(), Integer.parseInt(itemQtyText.getText()), Double.parseDouble(itemUnitPriceText.getText()));
             boolean isAdded = false;
             try {
@@ -174,7 +174,7 @@ public class ManageItemController implements Initializable {
 
     @FXML
     void updateButtonAction(ActionEvent event) {
-        if (checkQty() || checkPrice()) {
+        if (checkQty() && checkPrice()) {
             ItemDTO itemDTO = new ItemDTO(Integer.parseInt(itemCodeText.getText()), itemDescriptionText.getText(), Integer.parseInt(itemQtyText.getText()), Double.parseDouble(itemUnitPriceText.getText()));
             boolean isUpdated = false;
             try {

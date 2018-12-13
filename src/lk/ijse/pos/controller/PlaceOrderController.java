@@ -125,39 +125,53 @@ public class PlaceOrderController implements Initializable {
 
     @FXML
     void customerContactTextAction(ActionEvent event) {
-        if (Validation.integerValueValidate(customerContactText.getText())) {
+        if (Validation.telephoneNoValidate(customerContactText.getText())) {
             payText.requestFocus();
+        } else {
+            customerContactText.requestFocus();
+            customerContactText.selectAll();
         }
     }
 
     @FXML
     void customerNameTextAction(ActionEvent event) {
-        customerContactText.requestFocus();
+        if (Validation.stringsValidate(customerNameText.getText())) {
+            customerContactText.requestFocus();
+        } else {
+            customerNameText.requestFocus();
+            customerNameText.selectAll();
+
+        }
     }
 
     @FXML
     void customerNicTextAction(ActionEvent event) {
         if (Validation.nicValidate(customerNicText.getText())) {
-            ArrayList<CustomerDTO> customerDTOS = null;
+
             try {
-                customerDTOS = (ArrayList<CustomerDTO>) customerBO.getAllCustomers();
+                ArrayList<CustomerDTO> customerDTOS = (ArrayList<CustomerDTO>) customerBO.getAllCustomers();
+
+                if (customerDTOS != null) {
+                    for (CustomerDTO customerDTO : customerDTOS) {
+                        if (customerDTO.getCustomerNic().equals(customerNicText.getText())) {
+                            customerNameText.setText(customerDTO.getCustomerName());
+                            customerContactText.setText(customerDTO.getCustomerContact() + "");
+                            payText.requestFocus();
+                            break;
+                        } else {
+                            customerNameText.setDisable(false);
+                            customerContactText.setDisable(false);
+                            customerNameText.requestFocus();
+                        }
+                    }
+                } else {
+                    customerNameText.setDisable(false);
+                    customerContactText.setDisable(false);
+                    customerNameText.requestFocus();
+                }
+
             } catch (Exception e) {
                 e.printStackTrace();
-            }
-            if (customerDTOS != null) {
-                for (CustomerDTO customerDTO : customerDTOS) {
-                    if (customerDTO.getCustomerNic().equals(customerNicText.getText())) {
-                        customerNameText.setText(customerDTO.getCustomerName());
-                        customerContactText.setText(customerDTO.getCustomerContact() + "");
-                    } else {
-                        customerNameText.setDisable(false);
-                        customerContactText.setDisable(false);
-
-                    }
-                }
-                payText.requestFocus();
-            } else {
-                customerNameText.requestFocus();
             }
         } else {
             AlertBox.setAlert(Alert.AlertType.WARNING, "NIC invalid!");
@@ -188,8 +202,16 @@ public class PlaceOrderController implements Initializable {
 
     @FXML
     void itemQtyTextAction(ActionEvent event) {
-        itemUnitPriceText.requestFocus();
-        itemUnitPriceText.selectAll();
+        if (Integer.parseInt(itemQtyText.getText()) <= Integer.parseInt(qtyOnHandText.getText())) {
+            itemUnitPriceText.requestFocus();
+            itemUnitPriceText.selectAll();
+        } else if (Integer.parseInt(itemQtyText.getText()) == 0) {
+            itemQtyText.requestFocus();
+            itemQtyText.selectAll();
+        } else {
+            itemQtyText.requestFocus();
+            itemQtyText.selectAll();
+        }
     }
 
     @FXML
@@ -208,16 +230,32 @@ public class PlaceOrderController implements Initializable {
                     break;
                 }
             }
-
             int itemQty = Integer.parseInt(itemQtyText.getText());
             double price = Double.parseDouble(itemUnitPriceText.getText());
 
-            PlaceOrderItemDTO placeOrderItemDTO = new PlaceOrderItemDTO(id, itemDescriptionText.getText(), itemQty, price, (itemQty * price));
-            dtos.add(placeOrderItemDTO);
-            itemOrderTable.setItems(dtos);
+            ArrayList<Integer> itemCodes = new ArrayList<>();
+            for (PlaceOrderItemDTO placeOrderItemDTO : itemOrderTable.getItems()) {
+                itemCodes.add(itemCodeColumn.getCellObservableValue(placeOrderItemDTO).getValue());
+            }
+            String error = "ok";
+            for (Integer in : itemCodes) {
+                if (in == id) {
+                    AlertBox.setAlert(Alert.AlertType.WARNING, "This Item was added");
+                    error = "error";
+                    break;
+                }
+            }
+            if (error.equals("ok")) {
+                PlaceOrderItemDTO placeOrderItemDTO = new PlaceOrderItemDTO(id, itemDescriptionText.getText(), itemQty, price, (itemQty * price));
+                dtos.add(placeOrderItemDTO);
+                itemOrderTable.setItems(dtos);
 
-            total += itemQty * price;
-            totalPaymentText.setText(total + "");
+                total += itemQty * price;
+                totalPaymentText.setText(total + "");
+            } else {
+                itemUnitPriceText.requestFocus();
+                itemUnitPriceText.selectAll();
+            }
         }
         customerNicText.requestFocus();
     }
@@ -228,6 +266,8 @@ public class PlaceOrderController implements Initializable {
         double total = Double.parseDouble(totalPaymentText.getText());
         if (pay < total) {
             AlertBox.setAlert(Alert.AlertType.WARNING, "Please Pay Total Amount");
+            payText.requestFocus();
+            payText.selectAll();
         } else {
             double balance = (total - pay);
             balanceText.setText(balance + "");
@@ -277,7 +317,7 @@ public class PlaceOrderController implements Initializable {
                             if (itemDTO1.getItemCode() == itemCodeVal) {
                                 itemDTO.setItemCode(itemDTO1.getItemCode());
                                 itemDTO.setItemDescription(itemDTO1.getItemDescription());
-                                itemDTO.setItemQty(itemDTO1.getItemQty());
+                                itemDTO.setItemQty(itemDTO1.getItemQty()-itemQty);
                                 itemDTO.setItemUnitPrice(itemDTO1.getItemUnitPrice());
 
                                 OrderDetailDTO orderDetailDTO = new OrderDetailDTO();
